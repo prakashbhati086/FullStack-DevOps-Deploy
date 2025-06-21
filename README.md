@@ -1,5 +1,6 @@
 FullStack DevOps Deployment
 A personal DevOps project demonstrating end-to-end CI/CD workflows using a simple Node.js app, Docker, Jenkins, and Kubernetes.
+![image](https://github.com/user-attachments/assets/19be1f61-fdcd-4f22-b1c1-127d5a60f3c2)
 
 🎯 Project Purpose
 This project was built to:
@@ -19,6 +20,9 @@ Microservice deployment
 Infrastructure as Code
 
 Version-controlled automation
+![image](https://github.com/user-attachments/assets/ac41b18b-f863-494d-880a-6447538e0a66)
+![image](https://github.com/user-attachments/assets/57fbb0ed-cfc3-42e8-a1dc-3f5fe99b03be)
+![image](https://github.com/user-attachments/assets/5fd3c9c7-eac1-4282-ac6b-f3074e190adb)
 
 Tools & Technologies Used
 Category	           Tools
