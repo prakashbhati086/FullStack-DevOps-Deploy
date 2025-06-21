@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signed Out</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .logout-container {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .logout-container h2 {
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .logout-container .btn {
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+    }
+
+    .btn-login {
+      background-color: #007bff;
+    }
+
+    .btn-login:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-signup {
+      background-color: #28a745;
+    }
+
+    .btn-signup:hover {
+      background-color: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+  <div class="container logout-container">
+    <h2>You have successfully signed out.</h2>
+    <a href="/login" class="btn btn-login">Log In</a>
+    <a href="/signup" class="btn btn-signup">Sign Up</a>
+  </div>
+</body>
+</html>

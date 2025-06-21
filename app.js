@@ -7,19 +7,28 @@ const authRoutes = require('./routes/auth');
 dotenv.config();
 const app = express();
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+// ✅ Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
 
+// ✅ Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
+// ✅ Session config
 app.use(session({
-  secret: 'mysecret',
+  secret: process.env.SESSION_SECRET || 'myfallbacksecret',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: false
 }));
 
+// ✅ Routes
 app.use('/', authRoutes);
 
+// ✅ Server Start
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

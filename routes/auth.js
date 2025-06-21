@@ -27,4 +27,14 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/logout', (req, res) => {
+  // Destroy session if you're using it
+  req.session.destroy(err => {
+    if (err) {
+      return res.send('Error logging out');
+    }
+    res.render('logout'); // Show logout.html page
+  });
+});
+
 module.exports = router;

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nodeapp
-          image: prakashbhati086/node-auth-app:18-92a4fe1f39828549ede5fd42fef530147359f808
+          image: prakashbhati086/node-auth-app:19-8a3cc154a8d83f870c1b43d76801d2f0b321f1b5
           ports:
             - containerPort: 3000
           env:
