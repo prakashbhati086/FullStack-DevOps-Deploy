@@ -20,12 +20,10 @@ pipeline {
             }
         }
 
-        stage('Get Git Commit Hash') {
+        stage('Set Image Tag') {
             steps {
                 script {
-                    def commitHash = bat(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
-                    env.GIT_COMMIT = commitHash.split('\r?\n')[-1].trim()
-                    env.IMAGE_TAG = "${env.BUILD_NUMBER}-${env.GIT_COMMIT}"
+                    env.IMAGE_TAG = "v${env.BUILD_NUMBER}"
                 }
             }
         }
